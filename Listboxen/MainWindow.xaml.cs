@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,24 +16,32 @@ using System.Windows.Shapes;
 
 namespace Listboxen
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         public MainWindow()
         {
             InitializeComponent();
-            textBox.Focus();
+            input.Focus();
         }
 
-        private void button_Click(object sender, RoutedEventArgs e)
+        private void addButton_Click(object sender, RoutedEventArgs e)
         {
-            string newItem = textBox.Text;
+            string newItem = input.Text;
             shoppingListBox.Items.Add(newItem);
-            textBox.Clear();
-            textBox.Focus();
+            input.Clear();
+            input.Focus();
             aantal.Text = "Aantal: " + Convert.ToString(shoppingListBox.Items.Count);
+        }
+
+        private void itemButton_Click(object sender, RoutedEventArgs e)
+        {
+            string item = (string)shoppingListBox.Items[Convert.ToInt32(indexTextBox.Text)];
+            itemNaam.Text = item;
+        }
+
+        private void deleteButton_Click(object sender, RoutedEventArgs e)
+        {
+            shoppingListBox.Items.RemoveAt(Convert.ToInt32(indexTextBox.Text));
         }
     }
 }

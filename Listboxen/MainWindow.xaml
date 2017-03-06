@@ -8,8 +8,13 @@
         Title="MainWindow" Height="350" Width="525">
     <Grid>
         <ListBox x:Name="shoppingListBox" HorizontalAlignment="Left" Height="100" Margin="396,40,0,0" VerticalAlignment="Top" Width="100"/>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="65,40,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="button" Content="Add -&gt;" HorizontalAlignment="Left" Margin="242,39,0,0" VerticalAlignment="Top" Width="75" Click="button_Click" Height="24"/>
+        <TextBox x:Name="input" HorizontalAlignment="Left" Height="23" Margin="65,40,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="addButton" Content="Add -&gt;" HorizontalAlignment="Left" Margin="242,39,0,0" VerticalAlignment="Top" Width="75" Click="addButton_Click" Height="24"/>
         <TextBlock x:Name="aantal" HorizontalAlignment="Left" Height="33" Margin="396,145,0,0" TextWrapping="Wrap" Text="Aantal: 0" VerticalAlignment="Top" Width="100"/>
+        <TextBox x:Name="indexTextBox" HorizontalAlignment="Left" Height="23" Margin="91,177,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="48"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="55,177,0,0" TextWrapping="Wrap" Text="Index:" VerticalAlignment="Top" Height="23"/>
+        <TextBlock x:Name="itemNaam" HorizontalAlignment="Left" Margin="55,273,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="84" Height="25"/>
+        <Button x:Name="itemButton" Content="Itemnaam:" HorizontalAlignment="Left" Margin="55,248,0,0" VerticalAlignment="Top" Width="84" Click="itemButton_Click"/>
+        <Button x:Name="deleteButton" Content="Delete" HorizontalAlignment="Left" Margin="242,248,0,0" VerticalAlignment="Top" Width="75" Click="deleteButton_Click"/>
     </Grid>
 </Window>

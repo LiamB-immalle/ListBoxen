@@ -23,6 +23,16 @@ namespace Listboxen
         public MainWindow()
         {
             InitializeComponent();
+            textBox.Focus();
+        }
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            string newItem = textBox.Text;
+            shoppingListBox.Items.Add(newItem);
+            textBox.Clear();
+            textBox.Focus();
+            aantal.Text = "Aantal: " + Convert.ToString(shoppingListBox.Items.Count);
         }
     }
 }
